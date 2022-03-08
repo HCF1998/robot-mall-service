@@ -5,7 +5,8 @@ import lombok.Getter;
 @Getter
 public enum ResultCode {
 
-    SUCCESS("200","success");
+    SUCCESS("200","success"),
+    SERVER_FAILURE("500","Server faiilure");
 
     private String resultCode;
 

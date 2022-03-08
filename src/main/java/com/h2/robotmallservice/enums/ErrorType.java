@@ -1,17 +1,18 @@
 package com.h2.robotmallservice.enums;
 
-import org.springframework.validation.Errors;
+import lombok.Getter;
 
+@Getter
 public enum ErrorType {
 
-    SERVER_Error(500,"服务器异常"),
-    BADREQUEST_ERRPR(400,"错误请求");
+    SERVER_Error("500_1","服务器异常"),
+    BADREQUEST_ERRPR("400_1","错误请求");
 
-    private int errorCode;
+    private String errorCode;
 
     private String errorMessage;
 
-    ErrorType(int errorCode,String errorMessage){
+    ErrorType(String errorCode,String errorMessage){
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }
