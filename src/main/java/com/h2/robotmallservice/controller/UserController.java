@@ -23,15 +23,9 @@ public class UserController {
     @PostMapping("/registerUser")
     public PublicUserResponse registerUser(@RequestBody User user) throws InstantiationException, IllegalAccessException {
 
-        userService.registerUser(user);
-        RegisteredUser registeredUser = new RegisteredUser();
-        registeredUser.setUserName(user.getUserName());
-
-        //PublicUserResponse response = ResponseBuilderUtil.returnSuccessResponse(PublicUserResponse.class);
-        PublicUserResponse response = ResponseBuilderUtil.returnFailtureResponse(PublicUserResponse.class);
-        //response.setData(registeredUser);
+        //todo 表层校验
+        PublicUserResponse response = userService.registerUser(user);
         return response;
-
     }
 
 }
