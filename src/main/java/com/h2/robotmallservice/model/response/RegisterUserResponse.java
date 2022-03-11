@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PublicUserResponse extends BaseResponse<RegisteredUser> {
+public class RegisterUserResponse extends BaseResponse<RegisteredUser> {
 
-    public PublicUserResponse(Result result, Error error, RegisteredUser data) {
+    public RegisterUserResponse(Result result, Error error, RegisteredUser data) {
         super(result, error, data);
     }
 }

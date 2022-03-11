@@ -1,4 +1,4 @@
-package com.h2.robotmallservice;
+package com.h2.robotmallservice.interceptor;
 
 import com.auth0.jwt.JWT;
 import com.h2.robotmallservice.utils.JWTUtils;

@@ -1,6 +1,6 @@
 package com.h2.robotmallservice.config;
 
-import com.h2.robotmallservice.LoginInterceptor;
+import com.h2.robotmallservice.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
