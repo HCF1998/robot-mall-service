@@ -1,19 +1,29 @@
 package com.h2.robotmallservice.enums;
 
 import lombok.Getter;
+import lombok.ToString;
+import org.springframework.http.HttpStatus;
 
+@ToString
 @Getter
+/**
+ * 返回体枚举类
+ */
 public enum ResultCode {
 
-    SUCCESS("200","success"),
-    SERVER_FAILURE("500","Server faiilure");
+    SUCCESS(200,"Success"),
+    BAD_REQUEST(400,"Bad Request"),
+    UNAUTHORIZATION(401,"Unauthorized"),
+    INTERNAL_SERVER_ERROR(500,"Internal Server error");
 
-    private String resultCode;
+    // 业务码
+    private Integer code;
 
+    //信息描述
     private String message;
 
-    ResultCode(String resultCode, String message){
-        this.resultCode = resultCode;
+    ResultCode(Integer code , String message){
+        this.code = code;
         this.message = message;
     }
 
